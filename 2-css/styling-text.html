@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Styling Text</title>
+
+  <style type="text/css">
+    .bold {
+      font-weight: bold;
+      text-align: right;
+    }
+    
+    .italic {
+      font-style: italic;
+    }
+
+    .underlined {
+      text-decoration: underline;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+<body>
+  <p class="bold">This is some bold text</p>
+  <p class="italic">This is some italic text. <span class="bold">And this is bold and italic</span></p>
+  <p class="underlined">This is some underlined text</p>
+  <div>
+    <p>
+        <a href="http://www.google.com">Google</a>
+    </p>
+    <p>
+        <a href="http://www.google.com" target="_blank">Google in a new tab</a>
+    </p>
+  </div>
+</body>
+</html>
