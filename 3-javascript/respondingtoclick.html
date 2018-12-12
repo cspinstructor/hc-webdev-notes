@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responding to button click</title>
+</head>
+<body>
+  <p id="text">Hello World</p>
+  <button id="myButton">Change Text</button>
+
+  <script type="text/javascript">
+  // this is a comment
+    document.getElementById("myButton").onclick = () => {
+      document.getElementById("text").innerHTML = "Hi Hanchiang";
+    }
+  </script>
+</body>
+</html>

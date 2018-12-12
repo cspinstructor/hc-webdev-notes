@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Variables</title>
+</head>
+<body>
+  
+  <input type="text" name="" id="firstNumber">
+  <input type="text" name="" id="secondNumber">
+
+  <button id="addButton">Add</button>
+
+  <script type="text/javascript">
+    document.getElementById("addButton").onclick=()=>{
+      //a and b are strings
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+
+      console.log(a);
+      console.log(b);
+
+      // convert string to number then ADD
+      const sum = Number(a) + Number(b);
+
+      // concatenate two strings
+      const resultStr = 'The sum is: ' + sum;
+
+      alert(resultStr);
+    }
+    
+  </script>
+</body>
+</html>
