@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <div id="result"></div>
+
+    <script type="text/javascript">
+      const add = (a, b) => {
+        const sum = a + b;
+        return sum;
+      };
+
+      const multiply = (s, t) => {
+        return s * t;
+      };
+
+      const result = add(2, 3);
+      alert('Sum is: ' + result + ' Product is: ' + multiply(2, 3));
+
+      const htmlstr = 'Sum is: ' + result + ' Product is: ' + multiply(2, 3);
+
+      document.getElementById('result').innerHTML = htmlstr;
+    </script>
+  </body>
+</html>
