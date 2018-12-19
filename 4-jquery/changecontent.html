@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Change Content</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <style type="text/css">
+    #circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: blue;
+      margin: 10px;
+    }
+   
+  </style>
+
+</head>
+<body>
+  <div id="circle"></div>
+  <p id="text">This is some text</p>
+  <iframe src="https://www.thestar.com.my" frameborder="0"></iframe>
+
+  <script type="text/javascript">
+    $('#circle').click(()=>{
+     $('#text').html('You clicked');
+     $('iframe').attr('src', 'https://www.lazada.com.my');
+    })
+
+    $('#circle').hover(()=>{
+     $('#text').html('You hovered');
+    })
+
+    $('#circle').mouseleave(()=>{
+     $('#text').html('You left circle');
+    })
+   
+  </script>
+</body>
+</html>
