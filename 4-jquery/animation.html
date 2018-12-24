@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fading Content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+      #circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: blue;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+
+    <script type="text/javascript">
+      $("#circle").click(() => {
+        $("#circle").animate(
+          {
+            width: "300px",
+            height: "300px",
+            marginLeft: "150px",
+            marginTop: "150px"
+          },
+          2000,
+          () => {
+            $("#circle").css("background-color", "lightsalmon");
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
