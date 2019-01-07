@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Draggable and Resizable</title>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" />
+    <script src="jquery-ui/external/jquery/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+
+    <style type="text/css">
+      #draggable {
+        width: 150px;
+        height: 150px;
+        padding: 5px;
+        background-color: lightblue;
+      }
+      #resizable {
+        width: 150px;
+        height: 150px;
+        padding: 5px;
+        background-color: lightsalmon;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="draggable"><p>Drag me around</p></div>
+    <div id="resizable"><p>Resize me</p></div>
+    <script type="text/javascript">
+      $("#draggable").draggable();
+      $("#resizable").resizable();
+    </script>
+  </body>
+</html>
