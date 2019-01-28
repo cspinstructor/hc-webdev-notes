@@ -6,13 +6,13 @@
     die("Error connecting to database");
   } 
 
-  $query = "SELECT * FROM users";
+  $query = "INSERT INTO users(name,email,password) VALUES('david','david@gmail.com','667789')";
 
   if($result = mysqli_query($link, $query)) {
-    $row = mysqli_fetch_array($result);
+     //$row = mysqli_fetch_array($result);
 
     // print_r($row);
-    echo "Your name is: ".$row[1]."<br>and your email is: ".$row[2]."<br>and your password is: ".$row[3];
+    echo "Successfully created record.";
     
   }
 
