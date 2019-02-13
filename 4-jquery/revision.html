@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>A header</h1>
+    <p>This is a paragraph</p>
+    <div id="mydiv">This is a div with id</div>
+    <div id="otherdiv">This is a div with id</div>
+    <div class="myclass">This a div with class</div>
+    <div class="myclass">This is another same class</div>
+    <div id="multievent">This is multi event div</div>
+    <div><button id="mybutton">Click Me!</button></div>
+    <script>
+      $("p").dblclick(function() {
+        $("h1").hide();
+      });
+
+      $("#mydiv").click(function() {
+        $("#mydiv").html("Some new text");
+      });
+
+      $(".myclass").click(function() {
+        $(".myclass").html("Some more new text");
+      });
+
+      $(".myclass").mouseenter(function() {
+        alert("Mouse enter event");
+      });
+
+      $("#mydiv").on("click", function() {
+        alert("You clicked on mydiv");
+      });
+
+      $("#multievent").on({
+        mouseenter: function() {
+          $(this).css("background-color", "lightgray");
+        },
+        mouseleave: function() {
+          $(this).css("background-color", "lightblue");
+        },
+        click: function() {
+          $(this).css("background-color", "yellow");
+        }
+      });
+
+      $("#mybutton").click(function() {
+        alert($("#mybutton").text());
+      });
+    </script>
+  </body>
+</html>
