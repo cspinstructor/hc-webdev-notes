@@ -7,5 +7,7 @@
 			"path": "C:\\xampp\\htdocs"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WebProjects"
+	}
 }

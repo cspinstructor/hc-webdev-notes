@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search Pokemon</title>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  
+</head>
+<body>
+    <form>
+      Enter pokemon name:<br>
+      <input type="text" id="name">
+      <br>
+      <input type="button" id="buttonGo" value="Go">
+    </form> 
+
+  <div id="result">Ready</div>
+  <div><img id="my_image" src=""/></div>
+  <script>
+    
+
+
+    $("#buttonGo").click(function(){
+     
+      var name = $("#name").val();
+      var url = "https://pokeapi.co/api/v2/pokemon/" + name; // + "&apikey=" + key;
+     
+      $.ajax(url)
+      .done(function(data){
+        console.log(data);
+        $("#result").html(
+          "Name: "  + data.name + 
+          "<br> Height: " + data.height + 
+          "<br> Weight: " + data.weight);
+
+        $("#my_image").attr("src", data.sprites.front_default);
+      })
+      .fail(function(){});  
+      
+    });
+
+
+    
+  </script>
+  
+</body>
+</html>
