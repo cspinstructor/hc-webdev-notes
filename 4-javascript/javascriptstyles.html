@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <style type="text/css">
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      float: left;
+      margin: 50px;
+    }
+    #red-circle {
+      background-color: red;
+    }
+    #yellow-circle {
+      background-color: yellow;
+    }
+    #blue-circle {
+      background-color: blue;
+    }
+  </style>
+
+  <body>
+    <div class="circle" id="red-circle"></div>
+    <div class="circle" id="yellow-circle"></div>
+    <div class="circle" id="blue-circle"></div>
+
+    <script type="text/javascript">
+      const redCircle = document.getElementById('red-circle');
+      redCircle.onclick = () => {
+        redCircle.style.display = 'none';
+      };
+
+      const yellowCircle = document.getElementById('yellow-circle');
+      yellowCircle.onclick = () => {
+        yellowCircle.style.display = 'none';
+      };
+
+      const blueCircle = document.getElementById('blue-circle');
+      blueCircle.onclick = () => {
+        blueCircle.style.display = 'none';
+      };
+    </script>
+  </body>
+</html>
